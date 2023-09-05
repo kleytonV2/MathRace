@@ -1,0 +1,454 @@
+@keyframes animarSpan{ 
+    0%{color: black;font-size: 3em;width: 100px;height: 60px;margin-left: -65px;}
+    15%{color: white;}
+    30%{font-size: 3.2em;width: 110px;height: 70px;margin-left: -70px;}
+    45%{font-size: 3em;width: 100px;height: 60px;margin-left: -65px;}
+    60%{color: black;}
+    75%{font-size: 3.2em;width: 110px;height: 70px;margin-left: -70px;}
+    90%{color: white;}
+    100%{font-size: 3em;width: 100px;height: 60px;margin-left: -65px;}
+}
+@keyframes animarSpanMovil{
+    0%{color: black;font-size: 3em;width: 210px;height: 110px;margin-left: -105px;}
+    15%{color: white;}
+    30%{font-size: 3.2em;width: 220px;height: 120px;margin-left: -110px;}
+    45%{font-size: 3em;width: 210px;height: 110px;margin-left: -105px;}
+    60%{color: black;}
+    75%{font-size: 3.2em;width: 220px;height: 120px;margin-left: -110px;}
+    90%{color: white;}
+    100%{font-size: 3em;width: 210px;height: 110px;margin-left: -105px;}
+}
+
+@keyframes girarEngranaje{ 
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+	background-image: url(hierba.jpg);
+	background-size: 100% 100%;
+}
+p{
+	display: inline-block; 
+    font-family: 'Amatic SC';
+    font-size: 2em;
+    padding: 22px;
+    margin-top: 0px;
+}
+li{
+    font-family: 'Amatic SC';
+}
+
+/*CONTAINER*/
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+/*PANTALLA DE INICIO*/
+
+    #pantallaInicio{
+        position: absolute;
+        background-color: rgba(0,0,0,0.8);
+        width: 100%;
+        height: 1000px;
+        z-index: 5;
+        display: block;
+    }
+    #pantallaInicio > p{
+        margin-top: 100px;
+        display: block;
+        font-size: 30em;
+        text-align: center;
+        color: white;
+    }
+
+        /*MENU*/
+
+        div#menu{
+            background-color: lightseagreen;
+            border: 5px solid aqua;
+            border-radius: 20px;
+            margin-top: 140px;
+            width: 400px;
+        }
+        p#intro{
+            text-align: center;
+            margin-top: 25px;
+            border-radius: 20px;
+            border: 1px solid white;
+            height: auto;
+            background-color: lightskyblue;
+            font-family: 'Amatic SC';
+        }
+        p#empezar{
+            position: absolute;
+            padding: 20px;
+            width: 100px;
+            height: 60px;
+            display: inline-block;
+            margin-top: 45px;
+            margin-left: -65px;
+            color: white;
+            background-color: lightskyblue;
+            border-radius: 20px;
+            border: 1px solid white;
+            font-size: 3em;
+            animation: animarSpan 4s 0s infinite;
+            transition: transform 5s 0s;
+        }
+        p#empezar:hover{
+            box-shadow: 1px 1px 20px black;
+        }
+        p#empezar:active{
+            box-shadow: inset 0px 0px 20px black;
+        }
+        #menu{
+            width: 20%;
+            height: 400px;
+            margin: 0 auto;
+            z-index: 6;
+            background-color: rgba(255,255,255,0.85);
+            text-align: center;
+            padding: 20px;
+        }
+        #dificultad{
+            border: 1px solid black;
+            width: 60%;
+            height: 30px;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+        #ruedaDificultad{
+            border: 1px solid black;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            animation: girarEngranaje 2s 0s linear infinite;
+            animation-play-state: paused;
+            transition: margin 2s;
+        }
+    
+
+        /*_CAJA DE SELECCION DE PERSONAJES*/
+
+            #seleccionPersonajes{
+                display:none;
+                z-index: 0;
+            }
+            #personajeSeleccion, .candados{
+                position: absolute;
+                margin-top: 300px;
+                width: 10vmax;
+                height: 10vmax;
+                transition: width 2s, height 2s;
+                z-index: 0;
+            }
+            #personajeSeleccion:hover{
+                z-index: 2;
+                width: 11vmax;
+                height: 11vmax;
+            }
+            .personaje1{
+                margin-left: 25%;
+            }
+            .personaje2{
+                margin-left: 37%;
+            }
+            #candado1{
+                margin-left: 37%;
+                z-index: 3;
+                background-color: rgba(0,0,0,0.5);
+            }
+            .personaje3{
+                margin-left: 49%;
+            }
+            #candado2{
+                margin-left: 49%;
+                z-index: 3;
+                background-color: rgba(0,0,0,0.5);
+            }
+            .personaje4{
+                margin-left: 61%;
+            }
+            #candado3{
+                margin-left: 61%;
+                z-index: 3;
+                background-color: rgba(0,0,0,0.5);
+            }
+
+/*PARTE ARRIBA*/
+#parteArriba{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+    /*MARCADOR DE TIEMPO*/
+
+        #tiempo{
+            color:cyan; 
+            text-align: center;
+            border: 5px solid white;
+            width: 20%;
+            margin: 1%;
+            height: auto;
+            display: inline-block;
+            vertical-align: top;
+        }
+        div#tiempo p.titulo{
+            font-size: 3em;
+            color: black;
+            background-color: aqua;
+        }
+        div#tiempo p{
+            font-weight: bold;
+            font-size: 3em;
+            padding: 22px;
+            margin-top: 0px;
+        }
+
+
+    /*CAJA DE CALCULOS*/
+
+    #operacion{
+        color: white;
+        border: 1px solid black;
+        width: 40%;
+        padding: 10px;
+        margin: 1% 0% 0% 6%;
+        height: 100%;
+        vertical-align: top;
+        background-color: darkseagreen;
+        font-size: 7em;
+        border: 10px solid burlywood;
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        display: none;
+    }
+    #operacion p{
+        padding: 0;
+    }
+
+    /*TIEMPO RECORD*/
+
+        #tiempoRecord{
+            color: white;
+            position: relative;
+            background-color: grey;
+            border: 5px solid white;
+            margin: 1%;
+            font-size: 0.8em;
+            list-style:decimal;
+            list-style-position: inside;
+            display: inline-block;
+            vertical-align: top;
+            float: right;
+            width: 20%;
+            text-align: center; 
+        }
+        #tiempoRecord p{
+            color: black;
+            background-color: aqua;
+            font-size: 3em;
+            font-weight: bold;
+            width: 86.5%;
+        }
+        #tiempoRecord li{
+            text-align: left;
+            padding-left: 20px;
+            margin: 4px;
+            font-size: 1.2em;
+            border-bottom: 1px solid white;
+            font-size: 2em;
+        }
+        #tiempoRecord li:hover{
+            font-weight: bold;
+            border-bottom: 1.5px solid white;
+        }
+
+/*CAJA DE RESPUESTA*/
+
+#respuestaCalculo{
+    width: 100%;
+    height: auto;
+    margin: 300px auto 0px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10;
+}
+#respuestaCalculo input{
+    color: aqua;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Amatic SC';
+    font-size: 10em;
+    border-radius: 10px;
+    width: 20%;
+    height: 200px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/*CAJA DEL PERSONAJE EN JUEGO*/
+
+    #personaje{
+        background-image: url(personaje1.gif);
+        background-size: 100% 100%;
+        margin-top: 100px;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        z-index: 1;
+        transition: margin-left 2s 0s;
+    }
+
+/*LINEA DE META*/
+
+    #meta{
+        background-image: url(meta.jpg);
+        background-size: 100% 100%;
+        width: 40px;
+        height: 300px;
+        margin-left: 1300px;
+        margin-top: 100px;
+        position: absolute;
+        z-index: 0;
+    }
+    .titulo{
+        margin: 0px;
+        font-weight: bold;
+        display: block;
+    }
+
+/*SUELO - BACKGROUND*/
+
+    .suelo{
+        position: absolute;
+        margin-top: 100px;
+        width: 100%;
+        height: 300px;
+        background-color: brown;
+        z-index: -1;
+    }
+
+/*ARBOLES*/
+
+    .arboles{
+        position: absolute;
+        margin-top: 280px;
+        background-image: url(arbol1.gif);
+        width: 100%;
+        height: 300px;
+    }
+    .arboles2{
+        position: absolute;
+        margin-top: 380px;
+        background-image: url(arbol1.gif);
+        margin-left: 10%;
+        width: 90%;
+        height: 300px;
+    }
+
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 1360px){
+    body{
+        zoom: 80%;
+    }
+} 
+@media only screen and (max-width: 1100px){
+    body{
+        zoom: 60%;
+    }
+}
+@media only screen and (max-width: 830px){
+    body{
+        zoom: 40%;
+    }
+}
+@media only screen and (max-width: 560px){
+    body{
+        zoom: 20%;
+    }
+    
+    div#menu{
+        width: 60%;
+        font-size: 2em;
+        height: 600px;
+    }
+    p#empezar{
+        margin-top: 90px;
+        animation: animarSpanMovil 4s 0s infinite;
+    }
+    
+     #personajeSeleccion, .candados{
+        position: absolute;
+        margin-top: 150px;
+        width: 300px;
+        height: 300px;
+        transition: width 2s, height 2s;
+        z-index: 0;
+    }
+    #personajeSeleccion:hover{
+        width: 350px;
+        height: 350px;
+    }
+    .personaje1{
+        margin-left: 30%;
+    }
+    .personaje2{
+        margin-left: 55%;
+    }
+    #candado1{
+        margin-left: 55%;
+    }
+    #personajeSeleccion.personaje3{
+        margin-top: 500px;
+        margin-left: 30%;
+    }
+    #candado2{
+        margin-top: 500px;
+        margin-left: 30%;
+    }
+    #personajeSeleccion.personaje4{
+        margin-top: 500px;
+        margin-left: 55%;
+    }
+    #candado3{
+        margin-top: 500px;
+        margin-left: 55%;
+    }
+    
+    #parteArriba{
+        text-align: center;
+    }
+    #tiempo{
+        position: absolute;
+        margin-top: 1000px;
+        margin-left: 0%;
+        width: 99.2%;
+        display: block;
+        font-size: 3em;
+    }
+    #tiempoRecord{
+        position: absolute;
+        margin-top: 1450px;
+        margin-left: 0%;
+        width: 99.2%;
+        display: block;
+        font-size: 3em;
+        text-align: center;
+    }
+    #tiempoRecord p{
+        width: 96.3%;
+    }
+    
+}

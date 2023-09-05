@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Mi primer jugo con HTML y CSS</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Kleyton do Amparo Teixeira"/>
+    <meta 
+     name='viewport' content='width=device-width, user-scalable=0'/>
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="juego.css"/>
+	<script src="juego.js"></script> 
+</head> 
+<body>
+    
+    <div class="container">
+        <div id="pantallaInicio">
+            <div id="menu">
+                <p id="intro">Bienvenid@s a mi primer juego<br>Cuando estés listo presiona el botón<br>EMPEZAR</p><br>
+                <p id="empezar" onclick="mostraSeleccionPersonajes();sonidoEmpezar();sonidoSeleccionPersonajes()">EMPEZAR</p>
+            </div>
+            <div id="seleccionPersonajes">
+                <div id="personajeSeleccion" class="personaje1" onclick="cambiarPersonaje(1);seleccionPersonajeHecha();sonidoPersonajeElegido()">
+                    <img src="https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/4/46/Bmo-0.png/revision/latest?cb=20150322022558" alt="Phin" width="100%" height="100%">
+                </div>
+                <div id="personajeSeleccion" class="personaje2" onclick="cambiarPersonaje(2);seleccionPersonajeHecha();sonidoPersonajeElegido()">
+                    <img src="https://vignette.wikia.nocookie.net/mario/images/a/ab/Mario_8_bit.png/revision/latest?cb=20141027144957&path-prefix=es" alt="Calabacin" width="100%" height="100%">
+                </div>
+                <div id="candado1" class="candados" onclick="personajeBloqueado()">
+                    <img src="http://pegatinasyetiquetas.com/img/cms/post-candado.png" width="100%" height="100%">
+                </div>
+                <div id="personajeSeleccion" class="personaje3" onclick="cambiarPersonaje(3);seleccionPersonajeHecha();sonidoPersonajeElegido()">
+                    <img src="https://vignette.wikia.nocookie.net/steven-universe/images/7/77/Pikachu.png/revision/latest/scale-to-width-down/323?cb=20170721211542" alt="Pikachu" width="100%" height="100%">
+                </div>
+                <div id="candado2" class="candados" onclick="personajeBloqueado()">
+                    <img src="http://pegatinasyetiquetas.com/img/cms/post-candado.png" width="100%" height="100%">
+                </div>
+                <div id="personajeSeleccion" class="personaje4" onclick="cambiarPersonaje(4);seleccionPersonajeHecha();sonidoPersonajeElegido()">
+                    <img src="https://pre00.deviantart.net/f190/th/pre/f/2012/027/6/b/16_bit_sonic_by_nathanmarino-d4nscn2.png" alt="Sonic" width="100%" height="100%">
+                </div>
+                <div id="candado3" class="candados" onclick="personajeBloqueado()">
+                    <img src="http://pegatinasyetiquetas.com/img/cms/post-candado.png" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+
+        <div id="parteArriba">
+           
+            <div id="tiempo">
+                <p class="titulo">TIEMPO</p>
+                <p id="minutos">00</p>
+                <p>:</p>
+                <p id="segundos">00</p>
+            </div>
+            
+            <div id="operacion"></div>
+            
+            <ul id="tiempoRecord">
+                <p>TIEMPO RECORD</p>
+                <li id="listaUno">SONIC - 00:30</li>
+                <li id="listaDos">PIKACHU - 01:00</li>
+                <li id="listaTres">MARIO - 02:00</li>
+                <li id="listaCuatro">BMO - 05:00</li>
+            </ul>
+        </div>
+          <div id="respuestaCalculo"></div>
+
+
+            <div id="personaje">
+            </div>
+            <div id="meta">
+            </div>
+            <div class="suelo">
+            </div>
+            <div class="arboles">
+            </div>
+            <div class="arboles2">
+            </div>
+        
+        </div>
+</body>
+</html>
